@@ -1,0 +1,90 @@
+html,
+body,
+button {
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Quicksand, sans-serif;
+}
+
+.headbar {
+  width: 100%;
+}
+
+.egg-title {
+  font-family: Quicksand, sans-serif;
+  font-size: 3em;
+}
+
+#toolbar {
+  float: right;
+}
+
+button#log {
+  background-color: lightpink;
+}
+
+button#month,
+button#season,
+button#year,
+button#all {
+  background-color: lightskyblue;
+}
+
+.btn:disabled,
+[type=submit]:disabled,
+button:disabled {
+  opacity: .3;
+}
+
+.row {
+  margin: 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+#chart_div {
+  width: 1000px;
+  height: 500px;
+}
+
+#log_div {
+  padding: 30px 0px 0px 0px;
+}
+
+label#weight_label {
+  font-size: 2.5em;
+}
+
+input#weight_input {
+  font-size: 36px;
+  border: 2px solid #666;
+  padding: 10px;
+}
+
+div#today_div {
+  font-size: 28px;
+  font-family: Quicksand, sans-serif;
+}
+
+ul#egglist {
+  list-style-image: url('/img/favicon-32x32.png');
+}
+
+ul#egglist>li {
+  border-bottom: 1px solid #999;
+  margin-top: 10px;
+}
+ul#egglist>li>i:hover {
+  opacity: 1.0;
+}
+ul#egglist>li>i {
+  cursor: default;
+  float: right;
+  font-size: 36px;
+  opacity: 0.4;
+}

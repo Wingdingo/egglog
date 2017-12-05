@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Egglog v0.1</title>
+
+    <link rel="apple-touch-icon" sizes="60×60" href="http://ringo.local/egglog/img/touch-icon-iphone-60x60.png">
+    <link rel="apple-touch-icon" sizes="76×76" href="http://ringo.local/egglog/img/touch-icon-ipad-76x76.png">
+    <link rel="apple-touch-icon" sizes="120×120" href="http://ringo.local/egglog/img/touch-icon-iphone-retina-120x120.png">
+    <link rel="apple-touch-icon" sizes="152×152" href="http://ringo.local/egglog/img/touch-icon-ipad-retina-152x152.png">
+    <link rel="apple-touch-icon" sizes="180×180" href="http://ringo.local/egglog/img/apple-touch-icon-180x180.png">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/private_ids.js"></script>
+    <script type="text/javascript" src="js/egglog.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+    <link rel="stylesheet" href="css/egglog.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <table class='headbar'>
+            <tr>
+                <td>
+                    <p class='egg-title'>Egglog v0.1</p>
+                </td>
+                <td>
+                    <div id='navbuttons' style="display: none">
+                        <button id='prev' class='btn'>Prev</button>
+                        <button id='next' class='btn'>Next</button>
+                    </div>
+                </td>
+                <td>
+                    <div id='toolbar' style="display: none">
+                        <button id='log' class='btn btn-outline-inverted'>Log Eggs</button>
+                        <button id='month' class='btn btn-outline-inverted'>Month View</button>
+                        <button id='season' class='btn btn-outline-inverted'>Season View</button>
+                        <button id='year' class='btn btn-outline-inverted'>Year View</button>
+                        <button id='all' class='btn btn-outline-inverted'>Everything</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <div id="authorize-div" style="display: none">
+        <span>Authorize access to Google Calendar API</span>
+        <!--Button for the user to click to initiate auth sequence -->
+        <button id="authorize-button" onclick="handleAuthClick(event)">Authorize</button>
+    </div>
+    <div class='row center'>
+        <div id="chart_div"></div>
+        <div id="log_div">
+            <table>
+                <tr>
+                    <td>
+                        <h5>Weight (g): </h5><input id='weight_input' type='number'></input><button id='submit' class='btn btn-outline-inverted'>Submit</button>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table>
+            <h5>Day's Eggs (<span id="day_date"></span>)</h5>
+            <div id="day_div">
+            </div>
+        </div>
+    </div>
+    <pre class='center' id="output "></pre>
+</body>
+
+</html>
